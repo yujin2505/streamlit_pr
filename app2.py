@@ -7,6 +7,7 @@ def main() :
     
     name = '홍길동'
     
+    #프린트 함수는 디버깅용입니다!!!
     print(f'제 이름은 {name}입니다' )
     
     st.text(f'제 이름은 {name}입니다')
