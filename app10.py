@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import plotly.px
+import plotly.express as px
 
 def main() :
     
@@ -43,14 +43,20 @@ def main() :
     print(df4)
     
     #plotly 의 pie 차트
-    fig1 = px.pie(data_frame= df4, names='lang', values='Sum')
+    fig1 = px.pie(data_frame= df4, names='lang', values='Sum', title='각 언어별 파이차트')
     st.plotly_chart(fig1)
     
     #plotly 의 bar 차트
     print( df4.sort_values('Sum') )
     df_sorted = df4.sort_values('Sum')
-
+    fig2 = px.bar(data_frame=df_sorted, x='lang', y='Sum')
+    st.plotly_chart(fig2)
     
+    df_sorted2 = df4.sort_values('Sum', ascending=False)
+    
+    fig3 = px.bar(df_sorted2, x='lang', y='Sum')
+    st.plotly_chart(fig3)
+
     
 if __name__ == '__main__' :
     main()
