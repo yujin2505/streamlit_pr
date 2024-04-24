@@ -20,7 +20,7 @@ def main():
     st.image(url)
     
     #동영상 파일
-    video_file = open('./data/video1.mp4','rb')
+    video_file = open('./data/video1.mp4','rb')  #rb = read binary
     st.video(video_file)
     
     #오디오 파일
