@@ -83,5 +83,5 @@ def main():
     sb.heatmap(df_corr, vmin=-1, vmax=1, annot=True, fmt='.1f')
     st.pyplot(fig10)
     
-if __name__ == '__main__' :
+if __name__ == '__main__':
     main()
