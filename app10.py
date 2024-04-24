@@ -15,7 +15,7 @@ def main() :
     
     print(df1.columns[ 1: ])
     
-    column_list = df1.columns[ 1 : ]
+    column_list = df1.columns[ 1: ]
     choice_list = st.multiselect('언어를 선택하세요', column_list)
     print(choice_list)
     
